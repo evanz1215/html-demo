@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card-container {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.front {
+  background-color: blue;
+  transform: rotateY(0deg);
+  color: #fff;
+}
+
+.card-container:hover .front {
+  transform: rotateY(180deg);
+}
+
+.back {
+  background-color: yellow;
+  transform: rotateY(-180deg);
+  color: #000;
+}
+
+.card-container:hover .back {
+  transform: rotateY(0deg);
+}
