@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(-45deg, #fffaf0, #f8c3c1);
+}
+
+.wrap {
+  display: flex;
+  width: 1200px;
+  margin: 100px auto;
+  /* background-color: #999; */
+  padding-top: 75px;
+}
+
+.item {
+  width: 375px;
+  margin: 0 15px;
+  text-align: center;
+  border: 10px solid #f9cec2;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 10px 20px 50px #f7b6a7;
+}
+
+.item .txt {
+  padding: 20px 20px 2em;
+}
+
+.item .icon {
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  margin: -75px auto 0;
+  font-size: 65px;
+  color: #f5afac;
+  border-radius: 50%;
+  /* 垂直置中*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 單行也可以考慮*/
+  /* line-height: 150px; */
+  position: relative;
+}
+
+.item:hover .icon i {
+  animation: shake 0.2s linear infinite alternate;
+}
+
+.item .icon::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -10px;
+  top: -10px;
+  border-top: 10px solid #f9cec2;
+  border-right: 10px solid #f9cec2;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+}
+
+.item h3 {
+  color: #f5afac;
+}
+
+.item p {
+  color: #ccc;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}

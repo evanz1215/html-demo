@@ -1,0 +1,48 @@
+/* 菜单样式 */
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* 使用flex布局 */
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  padding: 8px 16px;
+  display: block;
+}
+
+.menu li {
+  position: relative;
+  margin-right: 10px; /* 为了给菜单项之间增加一些间距 */
+}
+
+.menu li:hover {
+  background-color: #f3f3f3;
+}
+
+/* 子菜单样式 */
+.menu li > ul {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  min-width: 150px; /* 设置一个最小宽度 */
+}
+
+.menu li:hover > ul {
+  display: block;
+}
+
+/* 子菜单项的样式 */
+.menu li ul li {
+  padding: 8px 16px;
+}
+
+.menu li ul li:hover {
+  background-color: #ddd;
+}
